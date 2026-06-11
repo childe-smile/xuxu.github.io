@@ -1,0 +1,352 @@
+/* style.css - Grunge page theme */
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+
+* {
+    cursor: url(https://cdn.cursors-4u.net/previews/sukuna-human-finger-4da27153-128.webp), auto !important;
+    box-sizing: border-box;
+}
+
+  @import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
+h1, h2,h3,h4,h5,h6{
+  font-family: 'Metal Mania', serif;
+}
+
+  @import url('https://fonts.googleapis.com/css2?family=Neuton:wght@300&display=swap');
+
+body{
+    font-family: 'Metal Mania', serif; x: 0;
+    background-color: rgba(255, 255, 255, 0.762);
+    background-image: url(assets/background.jpg);
+    background-attachment: fixed;
+    background-size: 1660px;
+    margin: 0;
+    padding: 20px;
+    color: #000000;
+    min-height: 100vh;
+    position: center;
+}
+
+/* scanline overlay */
+body::after {
+    content: " ";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 9999;
+    background: linear-gradient(rgba(20, 20, 100, 0.2) 50%, rgba(0, 0, 0, 0) 50%);
+    background-size: 100% 2px, 3px 100%;
+    pointer-events: none;
+}
+
+/* loud music sticker overlay */
+body::before {
+    content: " ";
+    height: 100vh;
+    width: 50vw;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 400px;
+    z-index: 1000;
+    background-image: url('assets/eminem.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: yourAnimation 2s ease 0s 1 normal forwards;
+    pointer-events: none;
+}
+
+/* main container */
+.page-container {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+}
+
+/* header */
+.page-header {
+    background: black;
+    border: 2px solid grey;
+    border-bottom: none;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    animation: float 4s ease-in-out infinite;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-stamp {
+    height: 50px;
+    width: auto;
+    filter: sepia(100%) hue-rotate(179deg) saturate(1.99);
+}
+
+.site-title {
+    font-size: 2rem;
+    margin: 0;
+    color: #2b0063;
+    text-decoration: underline;
+}
+
+.nav-links a {
+    color: #3be2ff !important;
+    text-decoration: underline !important;
+    margin-left: 20px;
+    font-size: 1.2rem;
+}
+
+.nav-links a:hover {
+    animation: shake 0.5s infinite;
+}
+
+/* main content */
+.page-main {
+    background: black;
+    border-left: 2px solid grey;
+    border-right: 2px solid grey;
+    padding: 20px;
+    animation: float 4s ease-in-out infinite;
+    position: relative;
+    padding-top: 220px;
+}
+
+.page-main::before {
+    width: 100%;
+    height: 200px;
+    display: block;
+    content: "";
+    background-image: url(https://i.pinimg.com/originals/d1/ce/15/d1ce15d284b3e347422df62818e09af6.gif);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom: 2px solid grey;
+    filter: sepia(100%) hue-rotate(179deg) saturate(1.99);
+}
+
+/* page posts */
+.page-post {
+    margin-bottom: 50px;
+    border-bottom: 2px solid grey;
+    padding-bottom: 30px;
+}
+
+.page-post:last-child {
+    border-bottom: none;
+}
+
+.post-title {
+    font-size: 28px;
+    color: #6f00ff;
+    background: black;
+    border: 2px solid grey;
+    padding: 10px 15px;
+    margin: 20px 0 10px 0;
+    display: inline-block;
+    text-decoration: underline;
+    animation: type 3s steps(27) 1;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.post-meta {
+    color: #8000ff;
+    opacity: 0.8;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.post-content {
+    line-height: 1.6;
+}
+
+.post-content p {
+    color: #6f00ff !important;
+}
+
+.post-content img {
+    max-width: 100%;
+    height: auto;
+    filter: sepia(100%) hue-rotate(179deg) saturate(1.99);
+    margin: 15px 0;
+    transition: all 0.2s;
+}
+
+.post-content img:hover {
+    animation: shake 0.5s infinite;
+}
+
+/* stamp gallery */
+.stamp-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0;
+    border: 2px solid grey;
+    padding: 15px;
+    background: rgba(0,0,0,0.8);
+}
+
+.stamp-gallery img {
+    width: 100px;
+    height: auto;
+    filter: sepia(100%) hue-rotate(179deg) saturate(1.99);
+}
+
+.stamp-gallery img:hover {
+    animation: shake 0.5s infinite;
+}
+
+/* buttons & inputs */
+button, .page-button {
+    color: #C4F6FF;
+    background-color: black;
+    border: 1px solid grey;
+    font-family: inherit;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    animation: shake 0.5s infinite;
+}
+
+input, textarea {
+    color: #C4F6FF;
+    background-color: black;
+    border: 1px solid grey;
+    font-family: inherit;
+    padding: 5px;
+}
+
+/* comments */
+.comment-section {
+    margin-top: 40px;
+    border-top: 2px solid grey;
+    padding-top: 20px;
+}
+
+.comment {
+    border: 1px solid grey;
+    padding: 15px;
+    margin-bottom: 15px;
+    background: rgba(0,0,0,0.5);
+}
+
+.comment-author {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* footer */
+.page-footer {
+    background: black;
+    border: 2px solid grey;
+    border-top: none;
+    padding: 15px;
+    text-align: center;
+    animation: float 4s ease-in-out infinite;
+}
+
+.page-footer p {
+    color: #8800ff !important;
+    margin: 5px;
+}
+
+/* animations */
+@keyframes float {
+    0% { transform: translate(0, 0px); }
+    50% { transform: translate(0, 8px); }
+    100% { transform: translate(0, -0px); }
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+@keyframes type {
+    0% { width: 0ch; }
+    100% { width: 27ch; }
+}
+
+@keyframes yourAnimation {
+    0.0% { opacity: 1; }
+    75% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* cursor credit */
+.cursor-credit {
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    z-index: 99999;
+    opacity: 0.4;
+    font-size: 10px;
+    color: #666;
+}
+
+.cursor-credit a {
+    color: #C4F6FF;
+}
+
+/* background music player */
+.background-music {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    z-index: 9999;
+    opacity: 0.3;
+    transition: 0.3s;
+    width: 200px;
+    height: 80px;
+}
+
+.background-music:hover {
+    opacity: 1;
+}
+
+iframe.hideobj {
+    width: 0;
+    height: 0;
+    display: none;
+}
+
+a {
+    color: #0041d9 !important;
+    text-decoration: underline !important;
+}
+
+hr {
+    border: 1px solid grey;
+}
+
+::selection {
+    background: #fffb00;
+}
